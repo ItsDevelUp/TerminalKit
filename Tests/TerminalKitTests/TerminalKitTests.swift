@@ -2,10 +2,22 @@
     @testable import TerminalKit
 
     final class TerminalKitTests: XCTestCase {
-        func testExample() {
+        func testBinBash() {
             // This is an example of a functional test case.
             // Use XCTAssert and related functions to verify your tests produce the correct
             // results.
-            XCTAssertEqual(TerminalKit().text, "Hello, World!")
+            
+            let terminal = Terminal(type: .bash, env: [:])
+            
+            XCTAssertEqual(terminal.type, "/bin/bash")
+        }
+        func testBinZsh() {
+            // This is an example of a functional test case.
+            // Use XCTAssert and related functions to verify your tests produce the correct
+            // results.
+            
+            let terminal = Terminal(type: .zsh, env: [:])
+            
+            XCTAssertEqual(terminal.type, "/bin/zsh")
         }
     }

@@ -10,6 +10,7 @@ let package = Package(
         .library(
             name: "TerminalKit",
             targets: ["TerminalKit"]),
+        .executable(name: "pruebas", targets: ["pruebas"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -21,6 +22,9 @@ let package = Package(
         .target(
             name: "TerminalKit",
             dependencies: []),
+        .target(
+            name: "pruebas",
+            dependencies: ["TerminalKit"]),
         .testTarget(
             name: "TerminalKitTests",
             dependencies: ["TerminalKit"]),
