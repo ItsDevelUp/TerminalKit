@@ -9,7 +9,7 @@ import Foundation
 import Dispatch
 
 
-public struct Terminal {
+open struct Terminal {
     
     private let lockQueue: DispatchQueue
     public var type: String
